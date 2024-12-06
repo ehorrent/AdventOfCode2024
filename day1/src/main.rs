@@ -54,8 +54,8 @@ fn main() {
     locations.sort();
 
     let distance = locations.distance();
-    println!("Distance={}", distance);
+    println!("Distance = {}", distance);
 
     let similarity = locations.similarity();
-    println!("Similarity={}", similarity);
+    println!("Similarity = {}", similarity);
 }
