@@ -8,10 +8,9 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug",
-      "program": "${fileDirname}/../target/debug/day3",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "sourceLanguages": ["rust"]
+      "cargo": {
+        "args": ["build", "--manifest-path", "${fileDirname}/../Cargo.toml"]
+      }
     }
   ]
 }
