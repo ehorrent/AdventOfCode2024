@@ -8,7 +8,7 @@ pub fn check_add(pos: usize, delta: i32) -> Option<usize> {
     }
 }
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq)]
 pub struct Direction {
     pub x: i32,
     pub y: i32,
@@ -32,22 +32,10 @@ impl Direction {
     }
 }
 
-impl PartialEq for Direction {
-    fn eq(&self, other: &Self) -> bool {
-        self.x == other.x && self.y == other.y
-    }
-}
-
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq)]
 pub struct Position {
     pub x: usize,
     pub y: usize,
-}
-
-impl PartialEq for Position {
-    fn eq(&self, other: &Self) -> bool {
-        self.x == other.x && self.y == other.y
-    }
 }
 
 impl ops::Add<Direction> for Position {
